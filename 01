@@ -1,0 +1,76 @@
+i have used L293D motor driver and an ultra sonic sensor
+
+
+
+
+
+int m1 = 4; // first output from motor deiver for motor 1
+int m2 = 5; // second output from motor driver for motor 1
+int m3 = 6; // first output from motor driver for motor 2 
+int m4 = 7; // second output from motor driver for motor 2
+
+
+int echopin = 11; \\ echo pin for ultrasonic sensor input
+int trig =12; \\ trig pin gor ultrasonic sensor output
+
+
+int distance;
+long duration;
+
+
+
+void setup() {
+  pinMode(m1,OUTPUT);      \\pinmodes for different inputs and outputs 
+   pinMode(m2,OUTPUT);
+    pinMode(m3,OUTPUT);
+     pinMode(m4,OUTPUT);
+     pinMode(3,INPUT);
+     pinMode(echopin,INPUT);
+     pinMode(trig,OUTPUT);
+    
+    
+    
+    
+    Serial.begin(9600);     \\ begin the serial monitor for different inputs from sensor
+}
+
+void loop() {
+  digitalWrite(trig,LOW);       \\ Detection of objects infron if in the range of 30 then following actions perform
+  delay(2);
+  digitalWrite(trig,HIGH);
+  delay(10);
+   digitalWrite(trig,LOW);
+
+   duration = pulseIn(echopin,HIGH);
+   distance = duration* 0.034/2;
+if(distance < 30 )
+{
+digitalWrite(m1,HIGH);
+digitalWrite(m2,LOW);
+digitalWrite(m3,HIGH);   
+digitalWrite(m4,LOW);
+delay(50);
+digitalWrite(m1,LOW);
+digitalWrite(m2,LOW);
+digitalWrite(m3,LOW);   
+digitalWrite(m4,LOW);
+
+
+digitalWrite(m1,HIGH);
+digitalWrite(m2,LOW);
+digitalWrite(m3,LOW);   
+digitalWrite(m4,HIGH);
+delay(100);
+digitalWrite(m1,LOW);
+digitalWrite(m2,LOW);
+digitalWrite(m3,LOW);   
+digitalWrite(m4,LOW);
+}
+else
+{digitalWrite(m1,HIGH);
+digitalWrite(m2,LOW);
+digitalWrite(m3,HIGH);   
+digitalWrite(m4,LOW);
+  }
+Serial.println(distance);
+}
