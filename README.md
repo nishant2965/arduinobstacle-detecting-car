@@ -3,10 +3,10 @@
 
 this is for obstacle detecting car in which the car moves in a straight path until an obstacle comes in its way.
 
-As any obstcle comes in the way the car changes the direction automatically and continue moving.
+As any obstacle comes in the way the car changes the direction automatically and continue moving.
 
 
-you may fine the code in the previous page.
+you may fine the code in this page.
 
 
 hardware equipments that are required for this project .
