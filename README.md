@@ -1,7 +1,7 @@
 # arduinobstacle-detecting-car
 
 
-this is for obstacle detecting car in which the car moves in a straight path until an obstacke comes in its way.
+this is for obstacle detecting car in which the car moves in a straight path until an obstacle comes in its way.
 
 As any obstcle comes in the way the car changes the direction automatically and continue moving.
 
