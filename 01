@@ -1,4 +1,4 @@
-\\i have used L293D motor driver and an ultra sonic sensor
+//i have used L293D motor driver and an ultra sonic sensor
 
 
 
@@ -10,8 +10,8 @@ int m3 = 6; // first output from motor driver for motor 2
 int m4 = 7; // second output from motor driver for motor 2
 
 
-int echopin = 11; \\ echo pin for ultrasonic sensor input
-int trig =12; \\ trig pin gor ultrasonic sensor output
+int echopin = 11; // echo pin for ultrasonic sensor input
+int trig =12; // trig pin gor ultrasonic sensor output
 
 
 int distance;
@@ -20,7 +20,7 @@ long duration;
 
 
 void setup() {
-  pinMode(m1,OUTPUT);      \\pinmodes for different inputs and outputs 
+  pinMode(m1,OUTPUT);      //pinmodes for different inputs and outputs 
    pinMode(m2,OUTPUT);
     pinMode(m3,OUTPUT);
      pinMode(m4,OUTPUT);
@@ -31,11 +31,11 @@ void setup() {
     
     
     
-    Serial.begin(9600);     \\ begin the serial monitor for different inputs from sensor
+    Serial.begin(9600);     // begin the serial monitor for different inputs from sensor
 }
 
 void loop() {
-  digitalWrite(trig,LOW);       \\ Detection of objects infron if in the range of 30 then following actions perform
+  digitalWrite(trig,LOW);       // Detection of objects infron if in the range of 30 then following actions perform
   delay(2);
   digitalWrite(trig,HIGH);
   delay(10);
